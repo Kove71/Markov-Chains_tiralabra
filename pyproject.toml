@@ -7,6 +7,8 @@ authors = ["Kosti Vesterinen <kosti.vesterinen@helsinki.fi>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 coverage = "^6.1.1"
+pylint = "^2.11.1"
+markovify = "^0.9.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
