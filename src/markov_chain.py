@@ -19,4 +19,4 @@ def generate_sentence(n = 1, corpus_name = "corpus.txt"):
 
 if __name__ == "__main__":
     n = int(input("Amount of sentences?"))
-    print(generate_sentence(n, "dracula.txt"))
+    print(generate_sentence(n, "greatgatsby.txt"))
