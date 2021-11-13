@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
     """
 
     def __init__(self):
-        """Luokan konstruktori. Määrittelee ikkunan nimen, koon ja luo 
+        """Luokan konstruktori. Määrittelee ikkunan nimen, koon ja luo
         ApplicationWidget-luokan, jossa käyttöliittymän toiminta on määritelty.
         """
 

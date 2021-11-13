@@ -3,7 +3,7 @@ import corpus_data
 
 def generate_sentence(n = 1, corpus_name = "corpus.txt"):
     """Käyttää markovify-moduulia tekstin generoimiseen.
-    
+
     Args:
         n: lauseiden määrä
         corpus_name: korpustekstitiedoston nimi
@@ -14,7 +14,7 @@ def generate_sentence(n = 1, corpus_name = "corpus.txt"):
     for i in range(n):
         generated_text += text_model.make_sentence()
         generated_text += "\n"
-    
+
     return generated_text
 
 if __name__ == "__main__":

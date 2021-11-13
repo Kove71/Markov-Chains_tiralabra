@@ -24,7 +24,7 @@ class ApplicationWidget(QWidget):
         super(QWidget, self).__init__(parent)
         self.layout = QVBoxLayout(self)
         self.setup_ui()
-    
+
     def setup_ui(self):
         self.generate_button = QPushButton("Generate!")
         self.generate_button.clicked.connect(self.generate_button_clicked)
