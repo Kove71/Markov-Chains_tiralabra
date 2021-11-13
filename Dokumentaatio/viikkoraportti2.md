@@ -18,4 +18,4 @@ Ennen, kuin alan turhaan hukkaamaan aikaa, onko ideana siis, että teen tyypilli
 
 ## Työaika
 
-9h
+10h
