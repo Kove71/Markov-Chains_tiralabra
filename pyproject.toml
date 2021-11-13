@@ -10,6 +10,7 @@ coverage = "^6.1.1"
 pylint = "^2.11.1"
 markovify = "^0.9.3"
 PyQt5 = "^5.15.6"
+invoke = "^1.6.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
