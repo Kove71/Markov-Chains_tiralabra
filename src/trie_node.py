@@ -15,6 +15,9 @@ class TrieNode:
     def get_word(self):
         return self.word
     
+    def get_count(self):
+        return self.count
+
     def check_children(self, word):
         for i in self.children:
             if word == i.get_word():
