@@ -26,7 +26,6 @@ class Trie:
                 child.increase_count()
                 node = child
                 
-
     def print_tree(self, node = None):
         if not node:
             node = self.root
