@@ -16,4 +16,11 @@
 | 13.11 | 1    | Dokumentointia |
 | Yhteensä | 10 |
 
-### Yhteensä 12h
+### Viikko 3
+
+| pvm | aika (h) | mitä tein  |
+| :----:|:-----| :-----|
+| 19.11 | 5     | Trie-rakenne implementoitu |
+| Yhteensä | 5 |
+
+### Yhteensä 17h
