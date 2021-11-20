@@ -41,8 +41,11 @@ Ohjelma on testattu python-versiolla 3.8.10, mutta kaikki python 3.8.0 korkeamma
 
 - [Määrittelydokumentti](/Dokumentaatio/maarittelydokumentti.md/)
 - [Työaikakirja](Dokumentaatio/tyoaikakirja.md/)
+- [Testausdokumentti](Dokumentaatio/testausdokumentti.md)
 
 ## Viikkoraportit
 
 - [Viikko 1](/Dokumentaatio/viikkoraportti1.md/)
 - [Viikko 2](/Dokumentaatio/viikkoraportti2.md/)
+- [Viikko 3](/Dokumentaatio/viikkoraportti3.md/)
+
