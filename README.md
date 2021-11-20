@@ -25,11 +25,13 @@ Coverage-report luodaan komennolla:
 ```bash
 poetry run invoke coverage
 ```
+Tämän jälkeen juurihakemistosta löytyy hakemisto htmlcov/, josta voi katsoa raportin.
+
 Trie-tietorakennetta voi testata juurihakemistossa komennolla:
 ```bash
 poetry run python3 src/trie.py
 ```
-Tämän jälkeen juurihakemistosta löytyy hakemisto htmlcov/, josta voi katsoa raportin.
+
 
 ## Python-versio
 
