@@ -5,7 +5,7 @@ Tiralabran projekti. Ohjelma generoi tekstiä korpustekstin perusteella käyttä
 ## Nykyinen versio
 
 Tekstin generoimista demotaan markovify-kirjastolla. Testaus ei ole vielä kattavaa, sillä suuri osa koodista on väliaikaista. PyQt5 tuottaa ongelmia 
-pylintin kanssa, joten pylint-tulos on toistaiseksi huono. 
+pylintin kanssa, käyttöliittymää ei vielä testata. Implementoitu myös trie-rakenne, mutta sitä ei vielä käytetä tekstin tuotossa.
 
 ## Käyttöohje
 
@@ -24,6 +24,10 @@ poetry run invoke test
 Coverage-report luodaan komennolla:
 ```bash
 poetry run invoke coverage
+```
+Trie-tietorakennetta voi testata juurihakemistossa komennolla:
+```bash
+poetry run python3 src/trie.py
 ```
 Tämän jälkeen juurihakemistosta löytyy hakemisto htmlcov/, josta voi katsoa raportin.
 
