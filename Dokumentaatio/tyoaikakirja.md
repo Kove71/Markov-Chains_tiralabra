@@ -21,6 +21,7 @@
 | pvm | aika (h) | mitä tein  |
 | :----:|:-----| :-----|
 | 19.11 | 5     | Trie-rakenne implementoitu |
-| Yhteensä | 5 |
+| 20.11 | 2     | Dokumentaatiota ja testausta lisätty |
+| Yhteensä | 7 |
 
-### Yhteensä 17h
+### Yhteensä 19h
