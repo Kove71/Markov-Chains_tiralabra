@@ -45,16 +45,17 @@ class Trie:
         
         node = self.root
         children = []
-        parent_freq = 1
         for i in ngram:
             child = node.check_children(i)
             if not child:
                 return None
             else:
                 node = child
-                parent_freq = node.get_count()
                 children = node.get_children()
-        return (parent_freq, children)
+        return children
+    
+    def get_root_children(self):
+        return self.root.get_children()
 
     def print_tree(self, node = None):
         """Tulostaa puun tiedot.
