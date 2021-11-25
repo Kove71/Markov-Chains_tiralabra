@@ -4,8 +4,7 @@ Tiralabran projekti. Ohjelma generoi tekstiä korpustekstin perusteella käyttä
 
 ## Nykyinen versio
 
-Tekstin generoimista demotaan markovify-kirjastolla. Testaus ei ole vielä kattavaa, sillä suuri osa koodista on väliaikaista. PyQt5 tuottaa ongelmia 
-pylintin kanssa, käyttöliittymää ei vielä testata. Implementoitu myös trie-rakenne, mutta sitä ei vielä käytetä tekstin tuotossa.
+Tekstin generointi on implementoitu vapaavalinteisella korpuksella ja markov-ketjun asteella. Tekstin generoimiseen käytetään trie-rakennetta. Testaus ei ole vielä kattavaa. PyQt5 tuottaa ongelmia pylintin kanssa, joten käyttöliittymää ei vielä testata. 
 
 ## Käyttöohje
 
