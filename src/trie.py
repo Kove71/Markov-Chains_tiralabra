@@ -19,18 +19,17 @@ class Trie:
         """Luo puun kutsumalla add_ngram metodia.
         """
 
-        for i in range(self.n - self.depth):
-            self.add_ngram(i)
+        for i in self.text:
+            sentence_length = len(i) - self.depth
+            for j in range(sentence_length):
+                self.add_ngram(i[j: j + self.depth])
 
-    def add_ngram(self, start_index):
-        """Lisää syvyyden perusteella sanajonon puuhun.
+    def add_ngram(self, ngram):
+        """Lisää syvyyden perusteella sanamonikon puuhun.
 
         Args:
-            start_index: indeksi, joka viittaa ngram
-            aloituskohtaan tekstilistassa.
+            ngram: sanamonikko, joka lisätään puuhun
         """
-
-        ngram = self.text[start_index: start_index + self.depth]
         node = self.root
         for word in ngram:
             child = node.check_children(word)
@@ -51,10 +50,10 @@ class Trie:
 
         for j in node.get_children():
             print(f"Node: {j.get_word()} | Freq: {j.get_count()} | "
-            "Depth: {j.get_depth()} | Parent: {node.get_word()}")
+            f"Depth: {j.get_depth()} | Parent: {node.get_word()}")
             self.print_tree(j)
 
 if __name__ == "__main__":
-    trie = Trie(tokenize(), 3)
+    trie = Trie(tokenize(), 2)
     trie.create_tree()
     trie.print_tree()
