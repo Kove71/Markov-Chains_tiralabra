@@ -40,6 +40,21 @@ class Trie:
             else:
                 child.increase_count()
                 node = child
+    
+    def find_ngram(self, ngram):
+        
+        node = self.root
+        children = []
+        parent_freq = 1
+        for i in ngram:
+            child = node.check_children(i)
+            if not child:
+                return None
+            else:
+                node = child
+                parent_freq = node.get_count()
+                children = node.get_children()
+        return (parent_freq, children)
 
     def print_tree(self, node = None):
         """Tulostaa puun tiedot.
@@ -54,6 +69,11 @@ class Trie:
             self.print_tree(j)
 
 if __name__ == "__main__":
-    trie = Trie(tokenize(), 2)
+    trie = Trie(tokenize(), 3)
     trie.create_tree()
     trie.print_tree()
+    find_result = trie.find_ngram(["This", "isn't"])
+    if find_result:
+        print(find_result[0])
+        for i in find_result[1]:
+            print(i.get_word(), i.get_count())
