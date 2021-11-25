@@ -24,4 +24,11 @@
 | 20.11 | 2     | Dokumentaatiota ja testausta lisätty |
 | Yhteensä | 7 |
 
-### Yhteensä 19h
+### Viikko 4
+
+| pvm | aika (h) | mitä tein  |
+| :----:|:-----| :-----|
+| 25.11 | 5     | Muutettu tokenisaatiota, oma markov-ketju algoritmi tehty ja käyttöliittymää päivitetty |
+| Yhteensä | 5 |
+
+### Yhteensä 24h
