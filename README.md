@@ -5,7 +5,7 @@ Tiralabran projekti. Ohjelma generoi tekstiä korpustekstin perusteella käyttä
 ## Nykyinen versio
 
 Tekstin generoimista demotaan markovify-kirjastolla. Testaus ei ole vielä kattavaa, sillä suuri osa koodista on väliaikaista. PyQt5 tuottaa ongelmia 
-pylintin kanssa, joten pylint-tulos on toistaiseksi huono. 
+pylintin kanssa, käyttöliittymää ei vielä testata. Implementoitu myös trie-rakenne, mutta sitä ei vielä käytetä tekstin tuotossa.
 
 ## Käyttöohje
 
@@ -27,6 +27,12 @@ poetry run invoke coverage
 ```
 Tämän jälkeen juurihakemistosta löytyy hakemisto htmlcov/, josta voi katsoa raportin.
 
+Trie-tietorakennetta voi testata juurihakemistossa komennolla:
+```bash
+poetry run python3 src/trie.py
+```
+
+
 ## Python-versio
 
 Ohjelma on testattu python-versiolla 3.8.10, mutta kaikki python 3.8.0 korkeammat versiot pitäisi toimia.
@@ -35,8 +41,11 @@ Ohjelma on testattu python-versiolla 3.8.10, mutta kaikki python 3.8.0 korkeamma
 
 - [Määrittelydokumentti](/Dokumentaatio/maarittelydokumentti.md/)
 - [Työaikakirja](Dokumentaatio/tyoaikakirja.md/)
+- [Testausdokumentti](Dokumentaatio/testausdokumentti.md)
 
 ## Viikkoraportit
 
 - [Viikko 1](/Dokumentaatio/viikkoraportti1.md/)
 - [Viikko 2](/Dokumentaatio/viikkoraportti2.md/)
+- [Viikko 3](/Dokumentaatio/viikkoraportti3.md/)
+
