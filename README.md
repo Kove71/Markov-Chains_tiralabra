@@ -6,7 +6,7 @@ Tiralabran projekti. Ohjelma generoi tekstiä korpustekstin perusteella käyttä
 
 Tekstin generointi on implementoitu vapaavalinteisella korpuksella ja markov-ketjun asteella. Tekstin generoimiseen käytetään trie-rakennetta. Testaus ei ole vielä kattavaa. PyQt5 tuottaa ongelmia pylintin kanssa, joten käyttöliittymää ei vielä testata. 
 
-## Käyttöohje
+## Asennusohje
 
 Ennen ensimmäistä käyttökertaa riippuvuudet tulee asentaa komennolla: 
 ```bash
@@ -31,6 +31,11 @@ Trie-tietorakennetta voi testata juurihakemistossa komennolla:
 poetry run python3 src/trie.py
 ```
 
+Ohjelma saattaa valittaa siitä, että nltk-kirjastoa ei ole asennettu. Jos tämä tapahtuu, suorita komento:
+```bash
+poetry run python3 src/dlnltk.py
+```
+Se asentaa 13mb-kokoisen tokenisaatiokirjaston. 
 
 ## Python-versio
 
