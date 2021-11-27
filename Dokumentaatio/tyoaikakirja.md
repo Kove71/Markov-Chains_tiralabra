@@ -29,6 +29,7 @@
 | pvm | aika (h) | mitä tein  |
 | :----:|:-----| :-----|
 | 25.11 | 5     | Muutettu tokenisaatiota, oma markov-ketju algoritmi tehty ja käyttöliittymää päivitetty |
-| Yhteensä | 5 |
+| 27.11 | 4     | Dokumentaatiota ja virheiden korjaamista |
+| Yhteensä | 9 |
 
-### Yhteensä 24h
+### Yhteensä 28h
