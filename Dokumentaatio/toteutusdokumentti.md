@@ -28,7 +28,7 @@ Sovellus käyttää markov-ketjua tekstin generointiin. Sen toiminallisuus tapah
 
 MarkovChain-luokka alustaa ensiksi Trie-luokan, joka saa parametreikseen markov-ketjuun asteen + 1, joka on trien syvyys, ja tokenisoidun tekstin, joka saadaan käyttämällä tokenize()-metodia. 
 
-MarkovChain-luokan generate_text()-metodi on vastuussa tekstin luomisesta. Se alustaa generated_text-muuttujan, joka on tyhjä string. Seuraavaksi se hakee lauseen ensimmäisen sanan ja antaa sen parametriksi add_sentence()-metodille. add_sentence()-metodi alustaa ensiksi prior_state-listan, jossa on lista lisätyistä sanoista. Sen maksimipituus on ketjun aste.
+MarkovChain-luokan generate_text()-metodi on vastuussa tekstin luomisesta. Se alustaa generated_text-muuttujan, joka on tyhjä string. Seuraavaksi se hakee lauseen ensimmäisen sanan ja antaa sen parametriksi add_sentence()-metodille. add_sentence()-metodi alustaa ensiksi prior_state-listan, jossa on lista lisätyistä sanoista. Sen maksimipituus on ketjun aste. Seuraavaksi etsitään mahdolliset sanat triestä prior_state:n perusteella. Jos sanoja ei löydy, lause lopetetaan. Jos sanoja löytyy luodaan niistä sana- ja painolistat, jotka annetaan random.choice()-metodille, joka valitsee sieltä painojen mukaan sanan, joka lisätään listaan. Tämä jatkuu niin pitkään, kunnes sanoja ei löydy tai sanoja on lauseen maksimipituuden verran, joka on toistaiseksi 20-sanaa. Sanoiksi lasketaan mukaan myös erilaiset merkit, kuten ", , ja -. 
 
 ### Aikavaativuus
 
