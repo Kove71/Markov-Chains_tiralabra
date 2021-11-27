@@ -42,7 +42,15 @@ class Trie:
                 node = child
     
     def find_ngram(self, ngram):
+        """Etsii monikon ja palauttaa monikon lapset.
+
+        Args:
+            ngram: sanamonikko, joka etsitään
         
+        Returns:
+            children: lista TrieNode-olioista, jotka
+            ovat monikon lapsia.
+        """
         node = self.root
         children = []
         for i in ngram:
@@ -55,6 +63,10 @@ class Trie:
         return children
     
     def get_root_children(self):
+        """Returns:
+            self.root.get_children: listan sanoista, joiden
+            syvyys on yksi.
+        """
         return self.root.get_children()
 
     def print_tree(self, node = None):

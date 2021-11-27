@@ -6,6 +6,7 @@ sys.path.insert(1, p)
 from PyQt5.QtWidgets import (
     QApplication,
     QButtonGroup,
+    QLabel,
     QLineEdit,
     QMainWindow,
     QRadioButton,
@@ -41,7 +42,10 @@ class ApplicationWidget(QWidget):
         self.setup_layout()
     
     def setup_parameters_ui(self):
+        """Alustaa parametrikohdan käyttöliittymäelementit.
+        """
         self.parameters_layout = QVBoxLayout()
+        self.paramater_label = QLabel()
         self.corpus_name_edit = QLineEdit()
         self.corpus_name_edit.setPlaceholderText("Enter the corpus text-file name here")
         self.parameters_layout.addWidget(self.corpus_name_edit)
@@ -50,8 +54,12 @@ class ApplicationWidget(QWidget):
         self.parameters_button = QPushButton("Create Markov Model")
         self.parameters_button.clicked.connect(self.paramater_button_clicked)
         self.parameters_layout.addWidget(self.parameters_button)
+        self.parameters_layout.addWidget(self.paramater_label)
 
     def create_radio_buttons(self):
+        """Luo vaihtoehdot markov-ketjun asteen valitsemiselle ja 
+        liittää ne asetteluun ja nappi-ryhmälle.
+        """
         self.buttons = []
         self.rbutton1 = QRadioButton("1st order Markov Chain")
         self.buttons.append(self.rbutton1)
@@ -84,15 +92,22 @@ class ApplicationWidget(QWidget):
         self.generate_layout.addWidget(self.text_box)
     
     def setup_layout(self):
+        """Asettelee käyttöliittymän elementit
+        """
         self.layout.addLayout(self.parameters_layout)
         self.layout.addLayout(self.generate_layout)
         self.setLayout(self.layout)
     
     def paramater_button_clicked(self):
+        """Suoritetaan, kun painetaan "Create Markov Model"-nappia.
+        Ottaa tekstilaatikon tekstin ja asteen ja antaa ne parametreina
+        MarkovChain-luokalle, joka vastaa markov-ketjun luomisesta.
+        """
         corpus_name = self.corpus_name_edit.text().strip()
         order = self.markov_order_group.checkedId()
         self.markov = MarkovChain(order, corpus_name)
         self.generate_button.setEnabled(True)
+        self.paramater_label.setText(f"order: {order}\ncorpus: {corpus_name}")
 
     def generate_button_clicked(self):
 

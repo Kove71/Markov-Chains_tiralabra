@@ -14,9 +14,4 @@ def tokenize(corpus_name = "corpus.txt"):
     text_sentences = sent_tokenize(text)
     return [word_tokenize(s) for s in text_sentences]
 
-if __name__ == "__main__":
-    text = tokenize()
-    print(len(text))
-    for i in text:
-        print(i)
     
