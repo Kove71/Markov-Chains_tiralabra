@@ -78,8 +78,8 @@ class MarkovChain:
         Returns:
             tuple jossa sanat ja painot
         """
-        choices_words = [node.get_word() for node in choices]
-        choices_weights = [node.get_count() for node in choices]
+        choices_words = [*choices]
+        choices_weights = [node.get_count() for node in choices.values()]
         return (choices_words, choices_weights)
 
 

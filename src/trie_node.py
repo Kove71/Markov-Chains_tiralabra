@@ -13,7 +13,7 @@ class TrieNode:
         """
 
         self.word = word
-        self.children = []
+        self.children = {}
         self.node_depth = depth
         self.count = 1
 
@@ -45,9 +45,8 @@ class TrieNode:
         Args:
             word: tarkistettava sana
         """
-        for i in self.children:
-            if word == i.get_word():
-                return i
+        if word in self.children:
+            return self.children[word]
         return None
 
     def increase_count(self):
@@ -61,4 +60,4 @@ class TrieNode:
         Args:
             node: lisättävä TrieNode-objekti.
         """
-        self.children.append(node)
+        self.children[node.get_word()] = node
