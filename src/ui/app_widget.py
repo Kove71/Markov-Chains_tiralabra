@@ -105,9 +105,13 @@ class ApplicationWidget(QWidget):
         """
         corpus_name = self.corpus_name_edit.text().strip()
         order = self.markov_order_group.checkedId()
-        self.markov = MarkovChain(order, corpus_name)
-        self.generate_button.setEnabled(True)
-        self.paramater_label.setText(f"order: {order}\ncorpus: {corpus_name}")
+        try:
+            self.markov = MarkovChain(order, corpus_name)
+            self.generate_button.setEnabled(True)
+            self.paramater_label.setText(f"order: {order}\ncorpus: {corpus_name}")
+        except Exception as e:
+            self.paramater_label.setText(repr(e))
+
 
     def generate_button_clicked(self):
 

@@ -18,10 +18,17 @@ class MarkovChain:
             nimi.
         """
         self.text = tokenize(corpus_name)
+        if not self.text:
+            self.handle_file_error()
         self.order = order
         self.trie = Trie(self.text, self.order + 1)
         self.trie.create_tree()
     
+    def handle_file_error(self):
+        """Käsittelee virheellisen tiedoston
+        """
+        raise Exception("No such file found")
+
     def generate_text(self, sentence_amount = 1):
         """Generoi lauseita kutsumalla 
         generate_sentence-metodia.

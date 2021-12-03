@@ -9,8 +9,12 @@ def get_corpus(corpus_name = "corpus.txt"):
         corpus_name: korpustekstitiedoston nimi
     """
     corpus_path = os.path.join(DIRNAME, "..", "data", corpus_name)
-    with open(corpus_path) as f:
-        text = f.read()
+    try:
+        with open(corpus_path, encoding="utf-8") as file:
+            text = file.read()
+        file.close()
+    except OSError:
+        return False
     return text
 
 if __name__ == "__main__":
