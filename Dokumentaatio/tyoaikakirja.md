@@ -32,4 +32,12 @@
 | 27.11 | 4     | Dokumentaatiota ja virheiden korjaamista |
 | Yhteensä | 9 |
 
-### Yhteensä 28h
+
+### Viikko 5
+
+| pvm | aika (h) | mitä tein  |
+| :----:|:-----| :-----|
+| 03.12 | 5     | Korjattu ongelmia ja testausta |
+| Yhteensä | 5 |
+
+### Yhteensä 33h
