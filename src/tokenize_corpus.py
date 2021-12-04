@@ -14,9 +14,10 @@ class TokenizeCorpus:
         if not self.text:
             return False
         self.text_sentences = sent_tokenize(self.text)
+        self.text_words = [word_tokenize(s) for s in self.text_sentences]
 
     def tokenize(self):
-        return [word_tokenize(s) for s in self.text_sentences]
+        return self.text_words
     
     def first_words(self):
-        return [sentence[0] for sentence in self.text_sentences]
+        return [sentence[0] for sentence in self.text_words]

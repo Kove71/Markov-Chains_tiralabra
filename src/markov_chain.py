@@ -48,7 +48,6 @@ class MarkovChain:
                 word = random.choices(choices)[0]
                 generated_text += self.generate_sentence(word)
                 generated_text += "\n"
-                print(word)
             except Exception:
                 self.handle_file_error("Markov Chain -order too high")
                 break        
