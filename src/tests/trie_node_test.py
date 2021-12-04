@@ -22,7 +22,7 @@ class TestTrieNode(unittest.TestCase):
     def test_add_child(self):
         child_node = TrieNode("child", 2)
         self.node.add_child(child_node)
-        self.assertAlmostEqual(self.node.children[0], child_node)
+        self.assertAlmostEqual(self.node.children["child"], child_node)
 
     def test_check_children(self):
         child_node = TrieNode("child", 2)
@@ -33,4 +33,4 @@ class TestTrieNode(unittest.TestCase):
     def test_get_children(self):
         child_node = TrieNode("child", 2)
         self.node.add_child(child_node)
-        self.assertAlmostEqual(self.node.get_children()[0].word, "child")
+        self.assertAlmostEqual(self.node.get_children()["child"], child_node)
