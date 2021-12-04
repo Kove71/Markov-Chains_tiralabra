@@ -18,7 +18,7 @@ Trie-luokalla on myös find_ngram()-metodi. Se saa parametrikseen monikon, joka 
 
 ### Aikavaativuus
 
-Ideaalisti trien luominen tapahtuu ajassa O(nm), jossa n on sanojen määrä ja m on sanojen määrä monikossa ("syvyys"). Toistaiseksi trien rakentaminen kestää huomattavasti hitaammin, sillä TrieNoden lapset tallenetaan listaan, jolloin lista pitää käydä läpi useasti. Vaihdan sen ensi viikolla pythonin dictionaryyn, jolloin rakentaminen on huomattavasti nopeampaa. Sanan etsiminen tapahtuu ideaalisti ajassa O(n), jossa n on monikon sanojen määrä.
+Ideaalisti trien luominen tapahtuu ajassa O(nm), jossa n on sanojen määrä ja m on sanojen määrä monikossa ("syvyys"). Sanamonikon etsiminen tapahtuu ideaalisti ajassa O(n), jossa n on monikon sanojen määrä ja sanan etsiminen toteutuu ajassa O(1)
 
 ## Markov-Ketju
 
