@@ -1,13 +1,13 @@
 import random
 
-from tokenize_corpus import tokenize
+from tokenize_corpus import TokenizeCorpus
 from trie import Trie
 
 class MarkovChain:
     """Markov-ketjuista vastaava luokka.
     """
 
-    SENTENCE_MAX_LENGTH = 20
+    SENTENCE_MAX_LENGTH = 50
 
     def __init__(self, order = 3, corpus_name = "corpus.txt"):
         """Luokan konstruktori
@@ -17,17 +17,18 @@ class MarkovChain:
             corpus_name: lähdemateriaalin tekstitiedoston
             nimi.
         """
-        self.text = tokenize(corpus_name)
+        self.tokenize = TokenizeCorpus(corpus_name)
+        self.text = self.tokenize.tokenize()
         if not self.text:
-            self.handle_file_error()
+            self.handle_file_error("No such file found")
         self.order = order
         self.trie = Trie(self.text, self.order + 1)
         self.trie.create_tree()
     
-    def handle_file_error(self):
+    def handle_file_error(self, message):
         """Käsittelee virheellisen tiedoston
         """
-        raise Exception("No such file found")
+        raise Exception(message)
 
     def generate_text(self, sentence_amount = 1):
         """Generoi lauseita kutsumalla 
@@ -42,11 +43,15 @@ class MarkovChain:
         generated_text = ""
 
         for i in range(sentence_amount):
-            choices = self.trie.get_root_children()
-            choices_attributes = self.get_choices_attributes(choices)
-            word = random.choices(choices_attributes[0], choices_attributes[1])[0]
-            generated_text += self.generate_sentence(word)
-            generated_text += "\n"        
+            choices = self.tokenize.first_words()
+            try:
+                word = random.choices(choices)[0]
+                generated_text += self.generate_sentence(word)
+                generated_text += "\n"
+                print(word)
+            except Exception:
+                self.handle_file_error("Markov Chain -order too high")
+                break        
         return generated_text
     
     def generate_sentence(self, first_word):
@@ -59,8 +64,8 @@ class MarkovChain:
             generoitu lause
         """
         prior_state = [first_word]
-        first_word = first_word[0].upper() + first_word[1:]
         generated_sentence = first_word
+        sentence_ending = "."
         for j in range(self.SENTENCE_MAX_LENGTH):
             choices = self.trie.find_ngram(prior_state)
             if not choices:
@@ -68,13 +73,14 @@ class MarkovChain:
             choices_attributes = self.get_choices_attributes(choices)
             word = random.choices(choices_attributes[0], choices_attributes[1])[0]
             if word in ["?", ".", "!"]:
+                sentence_ending = word
                 break
             generated_sentence += f" {word}"
             prior_state.append(word)
             if len(prior_state) > self.order:
                 prior_state.pop(0)
         
-        return f"{generated_sentence}."
+        return f"{generated_sentence}{sentence_ending}"
     
     def get_choices_attributes(self, choices):
         """Luo listat populaatiosta ja painoista random.choices varten
@@ -88,8 +94,3 @@ class MarkovChain:
         choices_words = [*choices]
         choices_weights = [node.get_count() for node in choices.values()]
         return (choices_words, choices_weights)
-
-
-if __name__ == "__main__":
-    markov = MarkovChain(5, "greatgatsby.txt")
-    print(markov.generate_text(4))

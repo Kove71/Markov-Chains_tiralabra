@@ -1,3 +1,5 @@
+"""käyttöliittymän elementit
+"""
 import os
 import sys
 p = os.path.abspath('.')
@@ -114,11 +116,14 @@ class ApplicationWidget(QWidget):
 
 
     def generate_button_clicked(self):
-
         """Suoritetaan, kun painetaan "Generate!"-nappia. 
         Kutsuu generate_sentence-metodia ja tulostaa sen tuottaman
         lauseen käyttöliittymään.
         """
-        text = self.markov.generate_text()
-        self.text_box.setText(text)
+
+        try:
+            text = self.markov.generate_text()
+            self.text_box.setText(text)
+        except Exception as e:
+            self.paramater_label.setText(repr(e))
         

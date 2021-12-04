@@ -1,4 +1,5 @@
-from tokenize_corpus import tokenize
+"""Trien luominen
+"""
 from trie_node import TrieNode
 
 class Trie:
@@ -61,32 +62,4 @@ class Trie:
                 node = child
                 children = node.get_children()
         return children
-    
-    def get_root_children(self):
-        """Returns:
-            self.root.get_children: listan sanoista, joiden
-            syvyys on yksi.
-        """
-        return self.root.get_children()
 
-    def print_tree(self, node = None):
-        """Tulostaa puun tiedot.
-        """
-
-        if not node:
-            node = self.root
-
-        for j in node.get_children():
-            print(f"Node: {j.get_word()} | Freq: {j.get_count()} | "
-            f"Depth: {j.get_depth()} | Parent: {node.get_word()}")
-            self.print_tree(j)
-
-if __name__ == "__main__":
-    trie = Trie(tokenize(), 3)
-    trie.create_tree()
-    trie.print_tree()
-    find_result = trie.find_ngram(["This", "isn't"])
-    if find_result:
-        print(find_result[0])
-        for i in find_result[1]:
-            print(i.get_word(), i.get_count())

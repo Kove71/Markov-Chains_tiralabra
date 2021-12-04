@@ -1,3 +1,6 @@
+"""Solmu trielle
+"""
+
 class TrieNode:
     """Solmu/sana trie-rakenteessa.
     """
