@@ -53,7 +53,7 @@ class Trie:
             ovat monikon lapsia.
         """
         node = self.root
-        children = []
+        children = {}
         for i in ngram:
             child = node.check_children(i)
             if not child:

@@ -16,6 +16,3 @@ def get_corpus(corpus_name = "corpus.txt"):
     except OSError:
         raise Exception
     return text
-
-if __name__ == "__main__":
-    print(get_corpus())

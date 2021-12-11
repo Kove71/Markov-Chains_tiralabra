@@ -8,3 +8,7 @@ class TestCorpusdata(unittest.TestCase):
 
     def test_get_corpus(self):
         self.assertAlmostEqual("testi", self.text)
+    
+    def test_incorrect_corpus(self):
+        with self.assertRaises(Exception):
+            corpus_data.get_corpus("fail")
