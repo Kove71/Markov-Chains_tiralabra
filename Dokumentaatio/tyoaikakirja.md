@@ -45,6 +45,7 @@
 | pvm | aika (h) | mitä tein  |
 | :----:|:-----| :-----|
 | 10.12 | 4     | Korjattu ongelmia ja testausta |
-| Yhteensä | 4 |
+| 11.12 | 1     | Dokumentointi |
+| Yhteensä | 5 |
 
-### Yhteensä 37h
+### Yhteensä 38h
