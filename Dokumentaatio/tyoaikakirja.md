@@ -40,4 +40,11 @@
 | 03.12 | 5     | Korjattu ongelmia ja testausta |
 | Yhteensä | 5 |
 
-### Yhteensä 33h
+### Viikko 6
+
+| pvm | aika (h) | mitä tein  |
+| :----:|:-----| :-----|
+| 10.12 | 4     | Korjattu ongelmia ja testausta |
+| Yhteensä | 4 |
+
+### Yhteensä 37h

@@ -15,3 +15,7 @@ def coverage(ctx):
 @task
 def lint(ctx):
     ctx.run("pylint src")
+
+@task
+def dlnltk(ctx):
+    ctx.run("python3 src/dlnltk.py")
