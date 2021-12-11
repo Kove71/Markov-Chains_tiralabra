@@ -21,7 +21,7 @@ class TestTokenizeCorpus(unittest.TestCase):
         first_words = self.tokenizer.first_words()
         testcase = ["This", "This", "This"]
         self.assertEqual(first_words, testcase)
-    
+
     def test_incorrect_corpus(self):
         with self.assertRaises(Exception):
             TokenizeCorpus("fail")

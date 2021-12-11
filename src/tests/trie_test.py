@@ -14,7 +14,7 @@ class TestTrie(unittest.TestCase):
         mock_root = TrieNode("*", 0)
         self.assertEqual(mock_root.get_word(), self.trie.root.get_word())
         self.assertEqual(mock_root.get_depth(), self.trie.root.get_depth())
-    
+
     def test_create_tree(self):
         self.trie.create_tree()
         mock_root_children = ["This", "is", "a", "test", "not", "finished", "temporary"]
@@ -23,7 +23,7 @@ class TestTrie(unittest.TestCase):
         this_node = root_children["This"]
         self.assertEqual(mock_root_children, root_children_keys)
         self.assertEqual(this_node.get_count(), 3)
-    
+
     def test_add_ngram(self):
         self.trie.add_ngram(["This", "cat"])
         mock_root_children = ["This"]
@@ -41,8 +41,9 @@ class TestTrie(unittest.TestCase):
         find_children = self.trie.find_ngram(["This", "cat", "is"])
         find_children_keys = [*find_children]
         self.assertEqual(find_children_keys, ["brown"])
-    
+
     def test_find_ngram_none(self):
         self.trie.add_ngram(["This", "cat", "is"])
         find_children = self.trie.find_ngram(["This", "dog"])
         self.assertEqual(find_children, None)
+    
