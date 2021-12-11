@@ -14,7 +14,7 @@ def get_corpus(corpus_name = "corpus.txt"):
             text = file.read()
         file.close()
     except OSError:
-        return False
+        raise Exception
     return text
 
 if __name__ == "__main__":

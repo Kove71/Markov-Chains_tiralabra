@@ -1,6 +1,6 @@
 """Ohjelman käynnistys
 """
-from PyQt5.QtWidgets import QApplication
+from PyQt5.QtWidgets import QApplication #pylint: disable=no-name-in-module
 from ui.ui import MainWindow
 
 if __name__ == "__main__":

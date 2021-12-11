@@ -5,7 +5,7 @@ class TestTrieNode(unittest.TestCase):
 
     def setUp(self):
         self.node = TrieNode("test", 1)
-    
+
     def test_get_depth(self):
         self.assertAlmostEqual(1, self.node.get_depth())
 

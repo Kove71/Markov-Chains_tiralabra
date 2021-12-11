@@ -12,7 +12,7 @@ class Trie:
         """
 
         self.text = text
-        self.n = len(text)
+        self.length = len(text)
         self.depth = depth
         self.root = TrieNode("*", 0)
 
@@ -41,13 +41,13 @@ class Trie:
             else:
                 child.increase_count()
                 node = child
-    
+
     def find_ngram(self, ngram):
         """Etsii monikon ja palauttaa monikon lapset.
 
         Args:
             ngram: sanamonikko, joka etsitään
-        
+
         Returns:
             children: lista TrieNode-olioista, jotka
             ovat monikon lapsia.
@@ -58,8 +58,6 @@ class Trie:
             child = node.check_children(i)
             if not child:
                 return None
-            else:
-                node = child
-                children = node.get_children()
+            node = child
+            children = node.get_children()
         return children
-
