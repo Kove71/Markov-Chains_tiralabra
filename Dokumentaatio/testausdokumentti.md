@@ -9,15 +9,15 @@ TrieNode-luokkaa testataan trie_node_test.py avulla. Se alustaa TrieNode-objekti
 
 ### Trie
 
-Trie-luokkaa testataan trie_test.py avulla. Testauksessa alustetaan Trie-objekti ja käydään sen metodit läpi. Testauksessa käytetään pääosin corpus.txt-tiedostoa, joka
-löytyy muiden korpuksien ohella data/-hakemistosta. Testaus myös kattaa virhetilanteen, jossa annettua tekstitiedostoa ei löydy.  
+Trie-luokkaa testataan trie_test.py avulla. Testauksessa alustetaan Trie-objekti ja käydään sen metodit läpi. Testauksessa käytetään pääosin corpus.txt-tiedostoa, joka löytyy muiden korpuksien ohella data/-hakemistosta. Testaus myös kattaa virhetilanteen, jossa annettua tekstitiedostoa ei löydy.  
 
 ## Markov
 
-MarkovChain-luokkaa ei testata vielä.
+MarkovChain-luokkaa testataan markov_chain_test.py avulla. Testauksessa alustetaan MarkovChain-luokka "testi.txt"-korpuksella. Testaus myös kattaa virhetilanteen,
+jossa annettua tekstitiedostoa ei löydy.
 
 ## Kattavuus
 
-Ohjelman kokonaistestikattavuus on 60%. Kattavuutta voi tutkia tarkemmin luomalla coverage-reportin README.md ohjeistamalla tavalla.
+Ohjelman kokonaistestikattavuus on 88%. Kattavuutta voi tutkia tarkemmin luomalla coverage-reportin README.md ohjeistamalla tavalla.
 
-![testikattavuus](./kuvat/coverage_markov_vko6.png)
+![testikattavuus](./kuvat/coverage_report_final.png)
