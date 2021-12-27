@@ -4,7 +4,7 @@ Tiralabran projekti. Ohjelma generoi tekstiä korpustekstin perusteella käyttä
 
 ## Nykyinen versio
 
-Tekstin generointi on implementoitu vapaavalinteisella korpuksella ja markov-ketjun asteella. Tekstin generoimiseen käytetään trie-rakennetta. Testaus ei ole vielä kattavaa.
+Tekstin generointi on implementoitu vapaavalinteisella korpuksella ja markov-ketjun asteella. Tekstin generoimiseen käytetään trie-rakennetta.
 
 ## Asennus- ja käyttöohje
 
@@ -38,7 +38,7 @@ Se asentaa 13mb-kokoisen tokenisaatiokirjaston.
 
 ## Käyttöohje
 
-Kun käynnistät ohjelman, voit testata valmiiksi ladattua korpusta kirjoittamalla 'greatgatsby.txt' tekstilaatikkoon. Parhaimmat tulokset tulee 4 tai 5 asteen ketjuilla. Markov Modelin luominen saattaa kestää hetken.
+Kun käynnistät ohjelman, voit testata valmiiksi ladattua korpusta kirjoittamalla 'greatgatsby.txt' tekstilaatikkoon. Parhaimmat tulokset tulee 3 tai 4 asteen ketjuilla. Markov Modelin luominen saattaa kestää hetken.
 
 ## Python-versio
 
