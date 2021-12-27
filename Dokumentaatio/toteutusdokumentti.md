@@ -18,7 +18,7 @@ Trie-luokalla on myös find_ngram()-metodi. Se saa parametrikseen monikon, joka 
 
 ### Aikavaativuus
 
-Ideaalisti trien luominen tapahtuu ajassa O(nm), jossa n on sanojen määrä ja m on sanojen määrä monikossa ("syvyys"). Sanamonikon etsiminen tapahtuu ideaalisti ajassa O(n), jossa n on monikon sanojen määrä ja sanan etsiminen toteutuu ajassa O(1)
+Trien luominen tapahtuu ajassa O(nm), jossa n on sanojen määrä ja m on sanojen määrä monikossa ("syvyys"). Sanamonikon etsiminen tapahtuu ajassa O(n), jossa n on monikon sanojen määrä ja sanan etsiminen toteutuu ajassa O(1)
 
 ## Markov-Ketju
 
