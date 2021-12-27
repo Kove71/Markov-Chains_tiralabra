@@ -48,4 +48,11 @@
 | 11.12 | 1     | Dokumentointi |
 | Yhteensä | 5 |
 
-### Yhteensä 38h
+### Loppupalautus
+
+| pvm | aika (h) | mitä tein  |
+| :----:|:-----| :-----|
+| 27.12 | 2     | Dokumentointi ja testaus|
+| Yhteensä | 2 |
+
+### Yhteensä 40h
